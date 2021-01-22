@@ -1,8 +1,8 @@
 class Chain{
     constructor(bodyAA, bodyBB){
         var options = {
-        bodyA: bodyAA.body,
-        bodyB:bodyBB.body,
+        bodyA: bodyAA,
+        bodyB:bodyBB,
         stiffness:0.04,
         length:10,
     }
@@ -10,5 +10,10 @@ class Chain{
     this.chain= Matter.Constraint.create(options);
     World.add(world, this.chain);
     }
-  //display();  
+  display(){
+    var pointA=this.chain.bodyA.position
+    var pointB=this.chain.bodyB.position
+    
+    line(pointA.x, pointA.y, pointB.x, pointB.y);
+  }  
 }

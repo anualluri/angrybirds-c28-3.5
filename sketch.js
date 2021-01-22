@@ -80,9 +80,10 @@ function draw(){
     log5.display();
     constraintlog.display();
 
-    //chain.display();
+    chain.display();
 
    // line(bird.body.position.x, bird.body.position.y, constraintlog.body.position.x, constraintlog.body.position.y,);
+
 
     bird.display();
     platform.display();
