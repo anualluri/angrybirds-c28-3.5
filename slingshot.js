@@ -12,9 +12,18 @@ class Sling{
     this.pointB=pointBB
     }
   display(){
-    var pointA=this.sling.bodyA.position;
-    var pointB=this.sling.pointB;
     
-    line(pointA.x, pointA.y, pointB.x, pointB.y);
+    if(this.sling.body!=null){
+        var pointA=this.sling.bodyA.position;
+        var pointB=this.sling.pointB;
+        line(pointA.x, pointA.y, pointB.x, pointB.y);
+    }
+   
+    
+  
   }  
+
+ fly(){
+    this.sling.bodyA=null;
+  }
 }

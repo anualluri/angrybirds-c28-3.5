@@ -87,3 +87,16 @@ function draw(){
     bird.display();
     platform.display();
 }
+
+
+function mouseDragged(){
+    console.log('I am being dragged ˚¬˚');
+    Matter.Body.setPosition(bird.body, {
+        x: mouseX, y: mouseY
+    });
+}
+
+function mouseReleased(){
+    slingshot.fly();
+    console.log('I have been reasleased :)');
+}
